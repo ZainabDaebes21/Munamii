@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munamii Cakery</title>
+    <link rel="icon" type="image/x-icon" href="Photos\CupCake.ico">
+    <link rel="stylesheet" href="styleadress.css">
+    <style>
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="BckgrVid">
+        <source src="Video/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="topnav" id="mainnavbar">
+        <a href="#index"><img class="MunamiiLogo" src="Photos\Logo.png" alt="Company Logo"></a>
+        <a class="active" href="adress.html" id="toplink">Contact us</a>
+        <a class="active" href="about.html" id="toplink">About us</a>
+        <a class="active" href="sweets.html" id="toplink">Sweets</a>
+        <a class="active" href="index.html" id="toplink">Home</a>
+    </div>
+
+    <div class="big-map-container">
+        <div class="hero-title">
+            <h1 id="herotitle">Where to find us!</h1>
+            <div class="map">
+                <iframe id="Gmap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15947.585715407413!2d-79.9730508!3d-2.192904!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x206c00290b70dd06!2sMunamii!5e0!3m2!1ssv!2sse!4v1652355489718!5m2!1ssv!2sse" width="75%" height="35%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <h1 class="hero-contact-title">Get in touch!</h1>
+        <a class="decolink" href="https://www.facebook.com/munamiicakery-648486288964377/"><div class="FB-link">
+            <img id="FB-cool" src="Photos\socialmedia\facebook.png" alt="FB">
+            <h4 id="FB-text">MunamiiCakery Facebook</h4>
+        </div></a>
+        <a class="decolink" href="https://www.instagram.com/munamii.cakery/reels/"><div class="Insta-link">
+            <h4 id="Insta-text">MunamiiCakery Instagram</h4>
+            <img id="Insta-cool" src="Photos\socialmedia\Intsagram.png" alt="instagram">
+            
+        </div></a>
+        <div class="WhatsApp">
+            <img id="Whatsapp-cool" src="Photos\socialmedia\WhatsApp.png" alt="whatsapp">
+            <h4 id="tele-number">0735-123456</h4>
+        </div>
+    </div>
+
+    <div class="footer" id="lowpoint">
+        <div class="socialmedia-buttons">
+            <div class="fb">
+                <a href="https://www.facebook.com/munamiicakery-648486288964377/photos/?ref=page_internal"><img id="FB" src="Photos\socialmedia\facebook.png" alt="Facebook"></a>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/munamii.cakery/reels/"><img id="INSTA" src="Photos\socialmedia\Intsagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
