@@ -1,170 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munamii Cakery</title>
-    <link rel="icon" type="image/x-icon" href="Photos\CupCake.ico">
+    <title>Munamii</title>
+
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file  -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            animation: fadeInAnimation ease 2s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
+
 </head>
+
 <body>
-    <video autoplay muted loop id="BckgrVid">
-        <source src="Video/background.mp4" type="video/mp4">
-    </video>
 
-    <div class="topnav" id="mainnavbar">
-        <a href="#index"><img class="MunamiiLogo" src="Photos\Logo.png" alt="Company Logo"></a>
-        <a class="active" href="adress.html" id="toplink">Contact us</a>
-        <a class="active" href="about.html" id="toplink">About us</a>
-        <a class="active" href="sweets.html" id="toplink">Sweets</a>
-        <a class="active" href="index.html" id="toplink">Home</a>
-    </div>
-
-    <div class="hero-container">
-        <h1 id="Hero-Title">Hi! Welcome to Munamii Cakery!</h1>
-        <p id="Hero-Text">We offer you the most delicious cakes and cupcakes for all kinds of events and celebrations. Browse around to discover what you would like to buy.</p>
-    </div>
-
-    <div class="topcontainer">
-        <div id="stage">
-            <a><img class="slideshow" src="Photos\slideshow\bake1.png" alt="Slideshow image"></a>
+    <!-- header section start here  -->
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"> <img src="images/logo.png" alt="" style="width: 6em; height: 6em;"></a>
+            <h1 class="logoName"></h1>
         </div>
-        <div class="top-rightcol">
-            <h1 class="maintitle">A party without cake is just a meeting.</h1>
-            <div class="biglink" id="Blink">
-                <a class="mainlink" href="#scrolltohere">Give in to temptation!</a>
-            </div>
-            <iframe id="Gmap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15947.585715407413!2d-79.9730508!3d-2.192904!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x206c00290b70dd06!2sMunamii!5e0!3m2!1ssv!2sse!4v1652355489718!5m2!1ssv!2sse" width="75%" height="35%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
 
-    <div class="productsample-container" id="scrolltohere">
-        <div class="toptext">
-            <h1>Delicious favourites:</h1>
-        </div>
-        <div class="row">
-            <div class="favmerch">
-                <a href="#popup2"><img id="sweet" src="Photos\merch\Cupcakes\vanilla.png" alt="Vanilla CupCake"></a>
-                <h4 id="sweet-Name">Rêve de vanille coloré</h4>
-                <p id="sweet-text">Some people just love it simple and vanilla.</p>
-            </div>
-            <div class="favmerch">
-                <a href="#popup1"><img id="sweet" src="Photos\merch\Cupcakes\strawberry.png" alt="Strawberry CupCake"></a>
-                <h4 id="sweet-Name">Fraise d'été</h4>
-                <p id="sweet-text">A taste of summer like no other, simply marvelous strawberries.</p>
-            </div>
-            <div class="favmerch">
-                <a href="#popup3"><img id="sweet" src="Photos\merch\Cakes\OreoCake.png" alt="Oreo cake"></a>
-                <h4 id="sweet-Name">Fantasmes d'Oreo</h4>
-                <p id="sweet-text">Sugar brings happiness. Eating it once or twice a week in a dessert, that is what life is about. There is nothing wrong with it.</p>
-            </div>
-            <div class="favmerch">
-                <a href="#popup4"><img id="sweet" src="Photos\merch\Cakes\RosePearlCake.png" alt="Rose Pearl Cake"></a>
-                <h4 id="sweet-Name">Couronne de roses</h4>
-                <p id="sweet-text">Roses are red, the cake is sweet, I think I'll have myself a treat.</p>
-            </div>
-            <div class="favmerch">
-                <a href="#popup5"><img id="sweet" src="Photos\merch\Cakes\FeatherCake.png" alt="Feather cake"></a>
-                <h4 id="sweet-Name">Les ailes du changement</h4>
-                <p id="sweet-text">Follow the Moskva, Down to Gorky Park, Listening to the wind of change!</p>
-            </div>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#product">product</a>
+            <a href="#blogs">blogs</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
 
-            <!-- The modal for the products, use this for all products. -->
-            <div id="popup1" class="overlay">
-                <div class="popup">
-                  <h2>Fraise d'été</h2>
-                  <a class="close" href="#scrolltohere">&times;</a>
-                  <img id="sweet" src="Photos\merch\Cupcakes\strawberry.png" alt="Strawberry CupCake">
-                  <div class="content">
-                    A taste of summer like no other, simply marvelous strawberries.
-                  </div>
-                  <div class="price-tag">
-                    2€
-                  </div>
-                </div>
-            </div>
-            <div id="popup2" class="overlay">
-                <div class="popup">
-                  <h2>Rêve de vanille coloré</h2>
-                  <a class="close" href="#scrolltohere">&times;</a>
-                  <img id="sweet" src="Photos\merch\Cupcakes\vanilla.png" alt="Strawberry CupCake">
-                  <div class="content">
-                    Some people just love it simple and vanilla.
-                  </div>
-                  <div class="price-tag">
-                    1€
-                  </div>
-                </div>
-            </div>
-            <div id="popup3" class="overlay">
-                <div class="popup">
-                  <h2>Fantasmes d'Oreo</h2>
-                  <a class="close" href="#scrolltohere">&times;</a>
-                  <img id="sweet" src="Photos\merch\Cakes\OreoCake.png" alt="Strawberry CupCake">
-                  <div class="content">
-                    Sugar brings happiness. Eating it once or twice a week in a dessert, that is what life is about. There is nothing wrong with it
-                  </div>
-                  <div class="price-tag">
-                    20€
-                  </div>
-                </div>
-            </div>
-            <div id="popup4" class="overlay">
-                <div class="popup">
-                  <h2>Couronne de roses</h2>
-                  <a class="close" href="#scrolltohere">&times;</a>
-                  <img id="sweet" src="Photos\merch\Cakes\RosePearlCake.png" alt="Strawberry CupCake">
-                  <div class="content">
-                    Roses are red, the cake is sweet, I think I'll have myself a treat.
-                  </div>
-                  <div class="price-tag">
-                    45€
-                  </div>
-                </div>
-            </div>
-            <div id="popup5" class="overlay">
-                <div class="popup">
-                  <h2>Les ailes du changement</h2>
-                  <a class="close" href="#scrolltohere">&times;</a>
-                  <img id="sweet" src="Photos\merch\Cakes\FeatherCake.png" alt="Strawberry CupCake">
-                  <div class="content">
-                    Follow the Moskva, Down to Gorky Park, Listening to the wind of change!
-                  </div>
-                  <div class="price-tag">
-                    70€
-                  </div>
-                </div>
-            </div>
-
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
         </div>
-    </div>
-    
-    <div class="footer" id="lowpoint">
-        <div class="socialmedia-buttons">
-            <div class="fb">
-                <a href="https://www.facebook.com/munamiicakery-648486288964377/photos/?ref=page_internal"><img id="FB" src="Photos\socialmedia\facebook.png" alt="Facebook"></a>
-            </div>
-            <div class="insta">
-                <a href="https://www.instagram.com/munamii.cakery/reels/"><img id="INSTA" src="Photos\socialmedia\Intsagram.png" alt="Instagram"></a>
+
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <!-- header section end here  -->
+
+    <!-- home section start here  -->
+    <section class="home" id="home">
+        <div class="homeContent">
+            <h2>Delicious Cake for Everyone </h2>
+            <p>Indulge in our delectable creations and let every bite tell a story of sweetness and joy.</p>
+            <div class="home-btn">
+                <a href="#"><button>see more</button></a>
             </div>
         </div>
-    </div>
-    
+    </section>
+
+    <!-- home section end here  -->
+
+    <!-- product section start here  -->
+    <section class="product" id="product">
+        <div class="heading">
+            <h2>Our Exclusive Products</h2>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Dive into the irresistible allure of our classic vanilla cake. Soft layers of moist sponge,
+                         kissed with fragrant vanilla, promise a delightful journey of flavor with every bite.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Elevate your taste experience with our heavenly red velvet cake. 
+                            Velvety layers of vibrant crimson sponge, swirled with creamy cheese frosting,
+                             deliver a perfect balance of decadence and sophistication.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Embark on a tropical escape with our tantalizing coconut cake.
+                        Tender coconut-infused layers, delicately frosted with coconut cream,
+                         transport your senses to sun-kissed shores with each heavenly mouthful.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake2.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Unleash your inner child with our whimsical rainbow cake. Layers of vibrant, rainbow-colored sponge,
+                           enrobed in smooth buttercream, promise a burst of joy and nostalgia in every slice.
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Immerse yourself in the enchanting allure of our lemon drizzle cake. Zesty layers of moist sponge,
+                        delicately soaked in tangy lemon syrup, offer a refreshing burst of citrusy delight with every forkful.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Treat yourself to the luxurious indulgence of our decadent caramel cake.
+                        Buttery layers of sponge, drenched in rich caramel sauce and adorned with caramelized nuts,
+                         offer a symphony of sweet flavors that melt in your mouth.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake1.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Experience the epitome of elegance with our exquisite raspberry and white chocolate cake.
+                        Layers of light sponge, infused with tart raspberry coulis and decadent white chocolate ganache,
+                         create a harmonious blend of fruity sweetness and creamy richness.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/cake2.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate</h3>
+                        <p>Delight in the comforting embrace of our classic carrot cake.
+                        Moist layers of spiced sponge, studded with sweet carrots and toasted nuts,
+                        are generously frosted with velvety cream cheese icing for a taste of home-baked perfection.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- product section end here  -->
+
+    <!-- blogs section start here  -->
+    <section class="blogs" id="blogs">
+
+        <div class=" swiper blogs-row">
+            <div class="swiper-wrapper">
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Caramel Bourbon Vanilla Cupcakes </h3>
+                        <p>
+                            Indulge in the sophisticated charm of our Bourbon Vanilla Cupcake.
+                             Each bite-sized delight features a moist vanilla sponge infused with the rich,
+                              warm notes of bourbon, perfectly complemented by a velvety swirl of bourbon-infused 
+                              buttercream frosting. It's a miniature indulgence that promises big flavor and a 
+                              touch of elegance in every bite.</p>
+                        <p>
+                            Treat yourself to the exquisite pleasure of our Bourbon Vanilla Cupcake,
+                            a tantalizing indulgence that promises to elevate your taste buds and leave you craving more.</p>
+                        <a href="#blogs" class="btn">learn more</a>
+                    </div>
+                </div>
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Caramel Bourbon Vanilla Cakes </h3>
+                        <p>Delight in the luxurious fusion of flavors with our Vanilla Bourbon Cake.
+                        Each slice offers a tantalizing blend of moist vanilla-infused sponge delicately laced with the warmth of bourbon,
+                        creating a harmonious symphony of sweet and smoky notes. Finished with a velvety bourbon-infused buttercream frosting,
+                        this indulgent creation is a true celebration of refined taste and irresistible decadence, perfect for any occasion deserving
+                        of something truly exceptional.</p>
+                        <p>Treat yourself to the exquisite pleasure of our Bourbon Vanilla Cakes,
+                        a tantalizing indulgence that promises to elevate your taste buds and leave you craving more.</p>
+                        <a href="#blogs" class="btn">learn more</a>
+                    </div>
+                </div>
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Caramel Bourbon Vanilla Cakes </h3>
+                        <p>Delight in the luxurious fusion of flavors with our Vanilla Bourbon Cake.
+                            Each slice offers a tantalizing blend of moist vanilla-infused sponge delicately laced with the warmth of bourbon,
+                            creating a harmonious symphony of sweet and smoky notes. Finished with a velvety bourbon-infused buttercream frosting,
+                            this indulgent creation is a true celebration of refined taste and irresistible decadence, perfect for any occasion deserving
+                            of something truly exceptional.</p>
+                        <p>Treat yourself to the exquisite pleasure of our Bourbon Vanilla Cakes,
+                         a tantalizing indulgence that promises to elevate your taste buds and leave you craving more.</p>
+                        <a href="#blogs" class="btn">learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+    </section>
+
+    <!-- blogs section ends here  -->
+
+    <!-- newsletter section start here  -->
+
+    <section class="newsletter">
+        <form action="">
+            <h3>subscribe for latest update</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="button" value="subscribe" class="box2">
+        </form>
+    </section>
+    <!-- newsletter section ends here  -->
+
+    <!-- review section start here  -->
+    <section class="review" id="review">
+        <div class="heading">
+            <h2>client review</h2>
+        </div>
+
+
+        <div class=" swiper review-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/client1.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Hardy Devid</h3>
+                            <p>UI / UX designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/client1.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Hardy Devid</h3>
+                            <p>UI / UX designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/client1.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Hardy Devid</h3>
+                            <p>UI / UX designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, perferendis architecto
+                            quasi eveniet aliquam sed?</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/client1.jpg" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Hardy Devid</h3>
+                            <p>UI / UX designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </section>
+    <!-- review section ends here  -->
+
+    <!-- footer section start here  -->
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                    <h1 class="logoName"></h1>
+                </div>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus maxime quod.</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>our  services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+91 12222 34444</a>
+                <a href="#"> <i class="fas fa-envelope"></i>Munamii@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        </div>
+    </footer>
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file  -->
+    <script src="index.js"></script>
+
+
 </body>
+
 </html>
